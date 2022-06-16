@@ -20,10 +20,11 @@ function playerChoice() {
     while (check == false) {
         input = prompt('Check your spelling!');
         while (input == null) {
-            input == prompt('Rock, Paper or Scissors?');
+            input = prompt('Rock, Paper or Scissors?');
         }
         input = input.toLowerCase();
         check = validateInput(input);
+        
     }
 
 }
