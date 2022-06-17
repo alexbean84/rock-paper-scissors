@@ -6,7 +6,8 @@ function game() {
 
 function playRound() {
     const playerSelection = playerChoice();
-    const computerSelection = computerChoice(); 
+    const computerSelection = computerChoice();
+    const winner = checkWinner(playerSelection, computerSelection);
 }
 
 function playerChoice() {
@@ -36,6 +37,20 @@ function computerChoice() {
 
 function validateInput(choice) {
     return choices.includes(choice)
+}
+
+function checkWinner(choiceP, choiceC) {
+    if(choiceP === choiceC) {
+        return 'Tie';
+    }   else if (
+        (choiceP === 'rock' && choiceC === 'scissors') || 
+        (choiceP === 'paper' && choiceC === 'rock') || 
+        (choiceP === 'scissors' && choiceC === 'paper') 
+    )   {
+        return 'Player won!';
+    }   else {
+        return 'Computer won!';
+    }
 }
 
 game();
