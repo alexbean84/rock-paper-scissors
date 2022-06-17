@@ -69,6 +69,14 @@ function logWins() {
     console.log('Tie:', ties);
 }
 
+function logRound(playerChoice, computerChoice, winner, round) {
+    console.log('Round:', round);
+    console.log('Player chose:', playerChoice);
+    console.log('Computer chose:', computerChoice);
+    console.log(winner, 'Won');
+
+}
+
 
 game();
 
