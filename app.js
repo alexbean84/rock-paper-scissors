@@ -46,7 +46,6 @@ function validateInput(choice) {
 }
 
 function checkWinner(choiceP, choiceC) {
-    console.log(choiceP, choiceC);
     if(choiceP === choiceC) {
         return 'Tie!';
     }   else if (
@@ -61,7 +60,13 @@ function checkWinner(choiceP, choiceC) {
 }
 
 function logWins() {
-    console.log(winners);
+    let playerWins = winners.filter((item) => item == 'Player won!').length;
+    let computerWins = winners.filter((item) => item == 'Computer won!').length;
+    let ties = winners.filter((item) => item == 'Tie!').length;
+    console.log('Results:');
+    console.log('Player won:', playerWins);
+    console.log('Computer won:', computerWins);
+    console.log('Tie:', ties);
 }
 
 
