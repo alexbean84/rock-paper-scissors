@@ -1,15 +1,18 @@
 const choices = ['rock', 'paper', 'scissors'];
+const winners = [];
 
 function game() {
     for (let i = 0; i < 5; i++) {
         playRound();
     }
+    logWins();
 }
 
 function playRound() {
     const playerSelection = playerChoice();
     const computerSelection = computerChoice();
     const winner = checkWinner(playerSelection, computerSelection);
+    winners.push(winner);
 }
 
 function playerChoice() {
@@ -57,7 +60,9 @@ function checkWinner(choiceP, choiceC) {
     }
 }
 
-
+function logWins() {
+    console.log(winners);
+}
 
 
 game();
