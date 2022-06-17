@@ -1,7 +1,9 @@
 const choices = ['rock', 'paper', 'scissors'];
 
 function game() {
-    playRound();
+    for (let i = 0; i < 5; i++) {
+        playRound();
+    }
 }
 
 function playRound() {
@@ -27,6 +29,7 @@ function playerChoice() {
         check = validateInput(input);
         
     }
+    return input;
 
 }
 
@@ -40,8 +43,9 @@ function validateInput(choice) {
 }
 
 function checkWinner(choiceP, choiceC) {
+    console.log(choiceP, choiceC);
     if(choiceP === choiceC) {
-        return 'Tie';
+        return 'Tie!';
     }   else if (
         (choiceP === 'rock' && choiceC === 'scissors') || 
         (choiceP === 'paper' && choiceC === 'rock') || 
@@ -52,6 +56,9 @@ function checkWinner(choiceP, choiceC) {
         return 'Computer won!';
     }
 }
+
+
+
 
 game();
 
