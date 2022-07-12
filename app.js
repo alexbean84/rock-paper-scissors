@@ -17,7 +17,7 @@ function startGame() {
     }))
 }
 
-function playRound(round) {
+function playRound(playerChoice) {
     const computerChoice = computerSelect();
 
     const winner = checkWinner(playerChoice, computerChoice);
@@ -27,7 +27,13 @@ function playRound(round) {
 
 function computerSelect() {
     return choices[Math.floor(Math.random() * choices.length)];
-    
+}
+
+function checkWins(){
+    let pWinCount = winners.filter((item) => item == 'Player').length;
+    let cWinCount = winners.filter((item) => item == 'Computer').length;
+    return Math.max(pWinCount, cWinCount);
+
 }
 
 function checkWinner(choiceP, choiceC) {
