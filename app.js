@@ -1,6 +1,12 @@
 const choices = ['rock', 'paper', 'scissors'];
 const winners = [];
 
+function resetGame() {
+    
+}
+
+
+
 function startGame() {
     playRound();
 
