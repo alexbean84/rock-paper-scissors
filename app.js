@@ -18,6 +18,10 @@ function startGame() {
 }
 
 function playRound(playerChoice) {
+    let wins = checkWins();
+    if (wins >= 5) {
+        return
+    }
     const computerChoice = computerSelect();
 
     const winner = checkWinner(playerChoice, computerChoice);
