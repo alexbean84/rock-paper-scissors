@@ -27,6 +27,15 @@ function playRound(playerChoice) {
     const winner = checkWinner(playerChoice, computerChoice);
 
     winners.push(winner);
+    displayWins();
+}
+
+function displayWins() {
+    let pWinCount = winners.filter((item) => item == 'Player').length;
+    let cWinCount = winners.filter((item) => item == 'Computer').length;
+    let ties = winners.filter((item) => item == 'Tie').length;
+    document.querySelector('.playerScore').textContent = `Score: ${pWinCount}`;
+
 }
 
 function computerSelect() {
@@ -54,7 +63,7 @@ function checkWinner(choiceP, choiceC) {
     }
 }
 
-function logWins() {
+function setWins() {
     let pWinCount = winners.filter((item) => item == 'Player').length;
     let cWinCount = winners.filter((item) => item == 'Computer').length;
     let ties = winners.filter((item) => item == 'Tie').length;
