@@ -29,10 +29,27 @@ function playRound(playerChoice) {
     winners.push(winner);
     displayWins();
     displayRound(playerChoice, computerChoice, winner);
+    wins = checkWins();
+    if (wins == 5) {
+        displayEnd()
+    }
+}
+
+function displayEnd() {
+    let playerWins = winners.filter((item) => item == 'Player').length;
+
+    if(playerWins == 5){
+        document.querySelector('.winner').textContent = 'You Won 5 Games!';
+    } else {
+        document.querySelector('.winner').textContent = 'The Computer Won 5 Times';
+    }
+    document.querySelector('.reset').style.display = 'flex';
 }
 
 function displayRound(playerChoice, computerChoice, winner) {
-    document.querySelector('.playerChoice').textContent = `You choose: ${playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)}`;
+    document.querySelector('.playerChoice').textContent = `You Chose: ${playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)}`;
+    document.querySelector('.computerChoice').textContent = `Computer Chose: ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`;
+    document.querySelector('.winner').textContent = `Round winner: ${winner}`;
 
 }
 
