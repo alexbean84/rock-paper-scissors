@@ -28,6 +28,12 @@ function playRound(playerChoice) {
 
     winners.push(winner);
     displayWins();
+    displayRound(playerChoice, computerChoice, winner);
+}
+
+function displayRound(playerChoice, computerChoice, winner) {
+    document.querySelector('.playerChoice').textContent = `You choose: ${playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)}`;
+
 }
 
 function displayWins() {
@@ -35,7 +41,8 @@ function displayWins() {
     let cWinCount = winners.filter((item) => item == 'Computer').length;
     let ties = winners.filter((item) => item == 'Tie').length;
     document.querySelector('.playerScore').textContent = `Score: ${pWinCount}`;
-
+    document.querySelector('.computerScore').textContent = `Score: ${cWinCount}`;
+    document.querySelector('.ties').textContent = `Score: ${ties}`;
 }
 
 function computerSelect() {
