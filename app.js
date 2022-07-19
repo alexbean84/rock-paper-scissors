@@ -1,7 +1,15 @@
 const choices = ['rock', 'paper', 'scissors'];
-const winners = [];
+let winners = [];
 
 function resetGame() {
+    winners = [];
+    document.querySelector(".playerScore").textContent = "Score: 0";
+    document.querySelector(".computerScore").textContent = "Score: 0";
+    document.querySelector(".ties").textContent = "Ties: 0";
+    document.querySelector(".winner").textContent = "";
+    document.querySelector(".playerChoice").textContent = "";
+    document.querySelector(".computerChoice").textContent = "";
+    document.querySelector(".reset").style.display = "none";
 
 }
 
@@ -94,12 +102,6 @@ function checkWinner(choiceP, choiceC) {
     }   else {
         return 'Computer';
     }
-}
-
-function setWins() {
-    let pWinCount = winners.filter((item) => item == 'Player').length;
-    let cWinCount = winners.filter((item) => item == 'Computer').length;
-    let ties = winners.filter((item) => item == 'Tie').length;
 }
 
 startGame();
