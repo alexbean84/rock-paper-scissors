@@ -8,33 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="score">
-        <h1 class="ties">Ties: 0</h1>
-    </div>
-    <div class="winnerDiv">
-        <button class="reset" onclick="resetGame()">Play Again?</button>
-    </div>
-    <div class="playerSelection">
-        <h3 class="playerChoice"></h3>
-        <h3 class="playerScore">Score: 0</h3>
-        <div class="playerImgs">
-            <img src="./images/rock1.png" alt="Rock" class="rock">
-            <img src="./images/scroll1.png" alt="Paper" class="paper">
-            <img src="./images/scissors1.png" alt="Scissors" class="scissors">
+    <div class="blob scene">
+        <div class="score">
+            <h1 class="ties">Ties: 0</h1>
         </div>
-    </div>
-    <div class="computerSelection">
-        <h3 class="computerChoice"></h3>
-        <h3 class="computerScore">Score: 0</h3>
-        <div class="computerImgs">
-            <img src="./images/rock1.png" alt="Rock" class="rock">
-            <img src="./images/scroll1.png" alt="Paper" class="paper">
-            <img src="./images/scissors1.png" alt="Scissors" class="scissors">
+        <div class="Div">
+            <h1 class="winner"></h1>
+            <button class="reset" onclick="resetGame()">Play Again?</button>
+        </div>
+        <div class="playerSelection">
+            <h3 class="playerChoice"></h3>
+            <h3 class="playerScore">Score: 0</h3>
+            <div class="playerImgs">
+                <img src="./images/rock1.png" alt="Rock" class="pImg" id="rock">
+                <img src="./images/scroll1.png" alt="Paper" class="pImg" id="paper">
+                <img src="./images/scissors1.png" alt="Scissors" class="pImg" id="scissors">
+            </div>
+        </div>
+        <div class="computerSelection">
+            <h3 class="computerChoice"></h3>
+            <h3 class="computerScore">Score: 0</h3>
+            <div class="computerImgs">
+                <img src="./images/rock1.png" alt="Rock" class="rock">
+                <img src="./images/scroll1.png" alt="Paper" class="paper">
+                <img src="./images/scissors1.png" alt="Scissors" class="scissors">
+            </div>
         </div>
     </div>
 
     
     
 </body>
-<scrpt src="app.js"></script>
+<script src="app.js"></script>
 </html>
