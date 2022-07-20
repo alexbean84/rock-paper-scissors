@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +8,55 @@
     <title>Rock Paper Scissors (UI)</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="blob scene">
-        <div class="score">
-            <h1 class="ties">Ties: 0</h1>
-        </div>
-        <div class="Div">
-            <h1 class="winner"></h1>
-            <button class="reset" onclick="resetGame()">Play Again?</button>
-        </div>
-        <div class="playerSelection">
-            <h3 class="playerChoice"></h3>
-            <h3 class="playerScore">Score: 0</h3>
-            <div class="playerImgs">
-                <img src="./images/rock1.png" alt="Rock" class="pImg" id="rock">
-                <img src="./images/scroll1.png" alt="Paper" class="pImg" id="paper">
-                <img src="./images/scissors1.png" alt="Scissors" class="pImg" id="scissors">
+    <svg id="visual" viewBox="0 0 900 900" width="900" height="900" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <g transform="translate(426.8033884101811 474.9671664638942)">
+            <path
+                d="M254.8 -270.1C307.8 -201.8 312.9 -100.9 313.8 0.9C314.8 102.8 311.5 205.5 258.5 258.4C205.5 311.2 102.8 314.1 -1.6 315.7C-106.1 317.4 -212.1 317.8 -249.6 265C-287.1 212.1 -256.1 106.1 -243.8 12.3C-231.6 -81.6 -238.1 -163.1 -200.6 -231.4C-163.1 -299.8 -81.6 -354.9 9.7 -364.6C100.9 -374.2 201.8 -338.4 254.8 -270.1"
+                fill="#5abb6f"></path>
+        </g>
+
+        <g transform="translate(405.2427241142268 426.18327473678227)">
+            <path
+                d="M280 -261.3C347.8 -212.1 377.4 -106.1 350.9 -26.5C324.4 53 241.7 106.1 173.9 178.4C106.1 250.7 53 342.4 -3.1 345.4C-59.2 348.5 -118.3 263 -171 190.7C-223.7 118.3 -269.8 59.2 -271 -1.2C-272.2 -61.5 -228.4 -123 -175.7 -172.2C-123 -221.4 -61.5 -258.2 22.3 -280.5C106.1 -302.7 212.1 -310.5 280 -261.3"
+                fill="#5abb6f"></path>
+        </g>
+    </svg>      
+        <div class="try">
+            <div class="score">
+                <h1 class="ties">Ties: 0</h1>
             </div>
-        </div>
-        <div class="computerSelection">
-            <h3 class="computerChoice"></h3>
-            <h3 class="computerScore">Score: 0</h3>
-            <div class="computerImgs">
-                <img src="./images/rock1.png" alt="Rock" class="rock">
-                <img src="./images/scroll1.png" alt="Paper" class="paper">
-                <img src="./images/scissors1.png" alt="Scissors" class="scissors">
+            <div class="Div">
+                <h1 class="winner"></h1>
+                <button class="reset" onclick="resetGame()">Play Again?</button>
+            </div>
+            <div class="playerSelection">
+                <h3 class="playerChoice"></h3>
+                <h3 class="playerScore">Score: 0</h3>
+                <div class="playerImgs">
+                    <img src="./images/rock1.png" alt="Rock" class="pImg" id="rock">
+                    <img src="./images/scroll1.png" alt="Paper" class="pImg" id="paper">
+                    <img src="./images/scissors1.png" alt="Scissors" class="pImg" id="scissors">
+                </div>
+            </div>
+            <div class="computerSelection">
+                <h3 class="computerChoice"></h3>
+                <h3 class="computerScore">Score: 0</h3>
+                <div class="computerImgs">
+                    <img src="./images/rock1.png" alt="Rock" class="rock">
+                    <img src="./images/scroll1.png" alt="Paper" class="paper">
+                    <img src="./images/scissors1.png" alt="Scissors" class="scissors">
+                </div>
             </div>
         </div>
     </div>
 
-    
-    
+
+
 </body>
 <script src="app.js"></script>
+
 </html>
