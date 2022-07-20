@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow: hidden;
   
 }
 
@@ -9,16 +10,32 @@ body {
     align-items: center;
     font-family: 'Raleway', sans-serif;
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 4px black;
+    text-shadow: 0 0 4px rgb(0, 0, 0);
     aspect-ratio: 960/540;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
 
 .scene {
     background-image: url('./blob-scene-haikei.svg');
+}
+
+.try {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 235px;
+}
+
+#visual {
+    position: absolute;
+    width: 100%;
+    top: 130px;
+    width: 100%;
 }
 
 .playerImgs,
@@ -26,9 +43,7 @@ body {
   display: flex;
   width: auto;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.048);
   padding: 20px;
-  border: solid black 5px;
   border-radius: 10px;
   max-height: 90px;
 }
@@ -57,12 +72,12 @@ img {
     display: none;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 60px;
-    background-color: rgba(0, 255, 255, 0.507);
-    color: black;
+    width: 150px;
+    height: 30px;
+    background-color: ivory;
+    color: gray;
     font-size: x-large;
-    border: 1px solid black;
+    border: 1px;
     border-radius: 5px;
 }
 
