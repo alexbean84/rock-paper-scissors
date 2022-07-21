@@ -1,41 +1,29 @@
 body {
     margin: 0;
-    overflow: hidden;
   
 }
 
-.blob {
+.container1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(#69c566, rgba(6, 16, 68, 0.678));
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: white;
+    text-shadow: 0 0 4px black;
+    font-size: 23px;
     font-family: 'Raleway', sans-serif;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 4px rgb(0, 0, 0);
-    aspect-ratio: 960/540;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
 }
 
-.scene {
-    background-image: url('./blob-scene-haikei.svg');
-}
-
-.try {
+.container2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 235px;
-}
-
-#visual {
-    position: absolute;
-    width: 100%;
-    top: 130px;
-    width: 100%;
+    top: 40px;
 }
 
 .playerImgs,
@@ -49,19 +37,19 @@ body {
 }
 
 img {
-    width: 90px;
-    height: 90px;
+    width: 110px;
+    height: 110px;
 }
 
 .pImg:hover {
     cursor: pointer;
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
 }
 
 .active {
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
 }
 
 .winner {
