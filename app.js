@@ -13,8 +13,6 @@ function resetGame() {
 
 }
 
-
-
 function startGame() {
    let imgs = document.querySelectorAll("img");
    imgs.forEach((img) => 
